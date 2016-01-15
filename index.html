@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
+        <script src="leaflet-fractional-zoom-control.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
+    </head>
+    <body>
+        <div id="map" style="width: 800px; height: 600px"></div>
+        <script>
+            var map = L.map('map',{                
+                zoomControl:false,
+                scrollWheelZoom:true
+            }).setView([40,-100], 8);
+            L.tileLayer('http://tile.osm.org/{z}/{x}/{y}.png', {
+                //maxZoom: 18,
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors ' +
+                        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ',
+                id: 'mapbox.streets'
+            }).addTo(map);
+
+
+        </script>
+    </body>
+</html>
